@@ -1,6 +1,8 @@
 
 # Stocks
 
+The Website is Live on [stockanalysis4you](https://stockanalysis4you.herokuapp.com/) .
+
 Here's a list of the packages we will use to accomplish this:
 
 -   Django
