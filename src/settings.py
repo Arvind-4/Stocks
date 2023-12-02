@@ -9,23 +9,11 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
-
 from pathlib import Path
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-DATABASE_DIR = BASE_DIR / 'database'
-DATABASE_DIR.mkdir(
-    parents=True,
-    exist_ok=True,
-)
 
 
 # Quick-start development settings - unsuitable for production
@@ -93,12 +81,7 @@ WSGI_APPLICATION = 'src.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(DATABASE_DIR / 'db.sqlite3'),
-    }
-}
+DATABASES = {}
 
 
 # Password validation

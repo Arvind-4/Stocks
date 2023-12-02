@@ -3,7 +3,6 @@ certifi==2023.11.17;
 charset-normalizer==3.3.2;
 django==3.2.23;
 idna==3.6;
-pysqlite3-binary==0.5.2.post2;
 python-decouple==3.8;
 pytz==2023.3.post1;
 requests==2.31.0;
