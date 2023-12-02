@@ -12,6 +12,11 @@ python3.9 -m pip install --upgrade pip
 echo "Installing dependencies..."
 python3.9 -m pip install -r requirements.txt
 
+ls -f
+
+echo "Permissions for db..."
+chmod 777 production.sqlite
+
 echo "Migrating database..."
 python3.9 manage.py makemigrations --noinput
 python3.9 manage.py migrate --noinput
