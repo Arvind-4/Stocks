@@ -30,5 +30,5 @@ echo "Collecting static files..."
 python3.9 manage.py collectstatic  --noinput --clear
 
 # ls -f
-# echo "Permissions for db..."
-# chmod 777 production.sqlite3
+echo "Permissions for db..."
+chmod +w production.sqlite3
