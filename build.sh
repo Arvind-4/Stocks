@@ -29,6 +29,6 @@ python3.9 manage.py createsuperuser \
 echo "Collecting static files..."
 python3.9 manage.py collectstatic  --noinput --clear
 
-# ls -f
+ls -f
 echo "Permissions for db..."
 chmod +w production.sqlite3
