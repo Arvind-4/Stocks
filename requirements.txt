@@ -1,6 +1,9 @@
+antiorm==1.2.1;
 asgiref==3.7.2;
 certifi==2023.11.17;
 charset-normalizer==3.3.2;
+db-sqlite3==0.0.1;
+db==0.1.1;
 django==3.2.23;
 idna==3.6;
 python-decouple==3.8;

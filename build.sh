@@ -2,9 +2,11 @@
 
 echo "Installing Python sqlite3..."
 cd /usr/local/bin/
+yum install sqlite -y
 yum install sqlite-devel -y
 ./configure --enable-optimizations --enable-loadable-sqlite-extensions
 make && make altinstall
+
 cd /vercel/path0/
 
 echo "Upgrade pip..."
