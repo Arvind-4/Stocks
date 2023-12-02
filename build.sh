@@ -33,13 +33,9 @@ python3.9 manage.py createsuperuser \
 echo "Collecting static files..."
 python3.9 manage.py collectstatic  --noinput --clear
 
-echo "Permissions..."
+# echo "Permissions..."
 # python3.9 mod.py
 
 # chown django:django /vercel/path0/
 # chown django:django /vercel/path0/database/db.sqlite3
 # chown django:django /vercel/path0/database
-
-
-chmod a+w /vercel/path0/database/db.sqlite3
-echo "Completed permissions..."
