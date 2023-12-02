@@ -1,6 +1,4 @@
 django
 requests
-django-compressor
-django-dotenv
-gunicorn
 whitenoise
+python-decouple
