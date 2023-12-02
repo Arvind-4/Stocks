@@ -32,7 +32,5 @@ echo "Collecting static files..."
 python3.9 manage.py collectstatic  --noinput --clear
 
 echo "Permissions for db..."
-ls -l /vercel/path0/db.sqlite3
-chmod 664 /vercel/path0/db.sqlite3
-ls -ld /vercel/path0/
-chmod 775 /vercel/path0/
+ls -l /tmp/db.sqlite3
+chmod 664 /tmp/db.sqlite3
