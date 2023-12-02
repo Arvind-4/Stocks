@@ -13,8 +13,8 @@ echo "Installing dependencies..."
 python3.9 -m pip install -r requirements.txt
 
 echo "Migrating database..."
-python3.9 manage.py makemigrations
-python3.9 manage.py migrate
+python3.9 manage.py makemigrations --noinput
+python3.9 manage.py migrate --run-syncdb
 
 echo "Creating superuser..."
 
