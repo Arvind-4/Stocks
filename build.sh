@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Removing old files..."
+rm -rf /vercel/path0/db.sqlite3
+rm -rf /vercel/path0/production.sqlite3
+
 echo "Installing Python sqlite3..."
 cd /usr/local/bin/
 yum install sqlite-devel -y
