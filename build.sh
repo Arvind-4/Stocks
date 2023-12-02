@@ -22,6 +22,8 @@ DJANGO_SUPERUSER_EMAIL=${DJANGO_SUPERUSER_EMAIL}
 DJANGO_SUPERUSER_USERNAME=${DJANGO_SUPERUSER_USERNAME}
 DJANGO_SUPERUSER_PASSWORD=${DJANGO_SUPERUSER_PASSWORD}
 
+echo "DJANGO_SUPERUSER_EMAIL: $DJANGO_SUPERUSER_EMAIL"
+
 python3.9 manage.py createsuperuser \
     --email $DJANGO_SUPERUSER_EMAIL \
     --noinput || true
@@ -32,6 +34,6 @@ python3.9 manage.py collectstatic  --noinput --clear
 ls -f
 echo "Permissions for db..."
 # chmod 664 production.sqlite3
-ls -l ./db.sqlite3
-chmod u+w ./db.sqlite3
-ls -l ./db.sqlite3
+ls -l /vercel/path0/db.sqlite3
+chmod u+w /vercel/path0/db.sqlite3
+ls -l /vercel/path0/db.sqlite3
