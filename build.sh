@@ -16,7 +16,7 @@ python3.9 -m pip install -r requirements.txt
 
 echo "Migrating database..."
 python3.9 manage.py makemigrations --noinput
-python3.9 manage.py migrate --run-syncdb
+python3.9 manage.py migrate --noinput
 
 echo "Creating superuser..."
 
@@ -32,10 +32,3 @@ python3.9 manage.py createsuperuser \
 
 echo "Collecting static files..."
 python3.9 manage.py collectstatic  --noinput --clear
-
-# echo "Permissions..."
-# python3.9 mod.py
-
-# chown django:django /vercel/path0/
-# chown django:django /vercel/path0/database/db.sqlite3
-# chown django:django /vercel/path0/database
