@@ -31,9 +31,8 @@ python3.9 manage.py createsuperuser \
 echo "Collecting static files..."
 python3.9 manage.py collectstatic  --noinput --clear
 
-ls -f
 echo "Permissions for db..."
-# chmod 664 production.sqlite3
 ls -l /vercel/path0/db.sqlite3
-chmod u+w /vercel/path0/db.sqlite3
-ls -l /vercel/path0/db.sqlite3
+chmod 664 /vercel/path0/db.sqlite3
+ls -ld /vercel/path0/
+chmod 775 /vercel/path0/
