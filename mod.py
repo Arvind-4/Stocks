@@ -12,7 +12,7 @@ print(f'Original permissions: {oct(db_file.stat().st_mode)[-3:]}')
 
 # # Set permissions to allow read and write  
 import stat
-db_file.chmod(db_file.stat().st_mode | stat.S_IRUSR | stat.S_IWUSR)
+db_file.chmod(stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXO)  
 
 # # Verify permissions changed
 print(f'New permissions: {oct(db_file.stat().st_mode)[-3:]}')
