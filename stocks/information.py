@@ -1,9 +1,8 @@
 import requests 
-import os
-import asyncio
-from pprint import pprint 
 
-API_KEY = os.environ.get('API_KEY')
+from django.conf import settings
+
+API_KEY = settings.API_KEY
 
 headers = {
 	'Content-Type': 'application/json',
@@ -11,7 +10,7 @@ headers = {
 }
 
 def get_search_data(stock_name):
-	url = f'https://api.tiingo.com/tiingo/utilities/search/{stock_name}'
+	url = f'https://api.tiingo.com/tiingo/utilities/search?query={stock_name}'
 	response = requests.get(url, headers=headers)
 	data = response.json()
 	return data 
