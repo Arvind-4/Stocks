@@ -31,4 +31,5 @@ python3.9 manage.py collectstatic  --noinput --clear
 
 ls -f
 echo "Permissions for db..."
-chmod 664 production.sqlite3
+# chmod 664 production.sqlite3
+chmod u+w ./production.sqlite3
