@@ -2,8 +2,8 @@
 
 echo "Installing Python sqlite3..."
 cd /usr/local/bin/
-sudo yum install sqlite-devel -y
-sudo yum install python3-devel -y
+yum install sqlite-devel -y
+yum install python3-devel -y
 cd /vercel/path0/
 
 echo "Upgrade pip..."
