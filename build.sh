@@ -1,17 +1,11 @@
 #!/bin/bash
 
-echo "Removing old files..."
-rm -rf /vercel/path0/db.sqlite3
-rm -rf /vercel/path0/production.sqlite3
-
 echo "Installing Python sqlite3..."
 cd /usr/local/bin/
 yum install sqlite-devel -y
 ./configure --enable-optimizations --enable-loadable-sqlite-extensions
 make && make altinstall
-
 yum install python3-devel -y
-
 cd /vercel/path0/
 
 echo "Upgrade pip..."
@@ -41,3 +35,9 @@ python3.9 manage.py collectstatic  --noinput --clear
 
 echo "Permissions..."
 python3.9 mod.py
+
+chown django:django /vercel/path0/
+chown django:django /vercel/path0/database/db.sqlite3
+chown django:django /vercel/path0/database
+
+echo "Completed permissions..."
