@@ -1,49 +1,44 @@
+# stocks:
+ A sleek Django site for viewing stock data, deployed on Vercel for smooth performance.
 
-# Stocks
+## 📦 Tech Stack:
 
-The Website is Live on [stockanalysis4you](https://stockanalysis4you.herokuapp.com/) .
+- [Django](https://www.djangoproject.com/)  - Django makes it easier to build better web apps more quickly and with less code.
+- [Bootstrap](https://getbootstrap.com/)  - Build fast, responsive sites with Bootstrap.
+- [Vercel](https://vercel.com/)  - Vercel's Front end Cloud provides the developer experience and infrastructure to build, scale, and secure a faster, more personalised Web.
 
-Here's a list of the packages we will use to accomplish this:
+## Demo:
 
--   Django
--   HTML5
--   CSS3
--   Gunicorn
-- whitenoise
--   and more .
+<a href="https://awesomestocks.vercel.app/">
+<img src="homepage.png" alt="Home Page"/>
+</a>
 
-## Code 
 
-### Install Virtualenv 
-```
-pip install virtualenv
-cd /path/to/folder
-mkdir stocks
-cd stocks
-python -m venv .
-```
-### Activate the Virtualenv
-```
-source scripts/activate
-```
-### Install Dependencies
-```
-cd /path/to/folder/stocks
-mkdir src
-cd src 
+## Getting Started: 
+
+- Clone repository 
+
+```bash
+mkdir ~/Dev/stocks -p
+cd ~/Dev/stocks
 git clone https://github.com/Arvind-4/Stocks.git .
+```  
+
+- Install Dependencies:
+
+```bash
+cd ~/Dev/stocks
+python3.9 -m pip install virtualenv
+python3.9 -m virtualenv . 
+source bin/activate
 pip install -r requirements.txt
 ```
 
+- Run Server:
 
-### Run the Code
-```
-cd /path/to/folder/health_website/src
-./run.sh
+```bash
+cd ~/Dev/stocks
+python manage.py runserver
 ```
 
-### Create Super User
-```
-cd /path/to/folder/health_website/src
-./superuser.sh
-```
+Open [localhost:8000](http://localhost:8000) in your favourite browser :)
